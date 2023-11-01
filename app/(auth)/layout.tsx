@@ -3,6 +3,9 @@ import '../globals.css';
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import imgSignIn from '../../public/assets/header_logo.png';
+import { listBottom } from '@/constants';
+import Link from 'next/link';
+import qr from '../../public/assets/qr_code.svg';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
@@ -18,9 +21,37 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-dark-1`}>
-        <div className="w-full flex flex-col items-center justify-center">
-          <Image src={imgSignIn} alt="header_image" className="inline-block" />
-          {children}
+        <main className="">
+          <Image
+            src={imgSignIn}
+            alt="header_image"
+            className="inline-block relative"
+          />
+          <div className="md:w-full container">{children}</div>
+        </main>
+        <div className="rightsidebar-pc text-white items-center justify-center">
+          <p className="text-[#777777] text-[13px]">Scan to get the app</p>
+          <div className="bg-[#181818] p-5 rounded-xl border border-[#323333]">
+            <Image
+              src={qr}
+              width={100}
+              height={100}
+              className="object-cover"
+              alt="qr_app"
+            />
+          </div>
+        </div>
+
+        <div className="bottombar-pc flex items-center justify-center gap-x-3">
+          {listBottom.map((item) => (
+            <Link
+              key={item.label}
+              href={item.route}
+              className="text-[12px] font-medium text-[#777777]"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
       </body>
     </html>

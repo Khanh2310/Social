@@ -19,11 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="flex flex-row">
+        {/* <main className="flex flex-row">
           <section className="main-container">
             <div className="w-full max-w-4xl">{children}</div>
           </section>
-        </main>
+        </main> */}
+        {children}
       </body>
     </html>
   );
