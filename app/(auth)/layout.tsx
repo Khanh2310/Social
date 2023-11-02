@@ -20,15 +20,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-dark-1`}>
-        <main className="">
-          <Image
-            src={imgSignIn}
-            alt="header_image"
-            className="inline-block relative"
-          />
-          <div className="md:w-full container">{children}</div>
-        </main>
+      <body className={`${inter.className} bg-dark-1 `}>
+        <Image
+          src={imgSignIn}
+          alt="header_image"
+          className="inline-block relative"
+        />
+        <div className="md:w-full container">{children}</div>
         <div className="rightsidebar-pc text-white items-center justify-center">
           <p className="text-[#777777] text-[13px]">Scan to get the app</p>
           <div className="bg-[#181818] p-5 rounded-xl border border-[#323333]">
