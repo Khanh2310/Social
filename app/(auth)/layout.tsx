@@ -24,7 +24,7 @@ export default function RootLayout({
         <Image
           src={imgSignIn}
           alt="header_image"
-          className="inline-block relative"
+          className="inline-block relative object-cover"
         />
 
         <div className="md:w-full container">{children}</div>

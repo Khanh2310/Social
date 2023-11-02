@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { RecoilRoot } from 'recoil';
 
 import '../globals.css';
 
@@ -24,7 +25,7 @@ export default function RootLayout({
             <div className="w-full max-w-4xl">{children}</div>
           </section>
         </main> */}
-        {children}
+        <RecoilRoot>{children}</RecoilRoot>
       </body>
     </html>
   );
