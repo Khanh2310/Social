@@ -3,9 +3,9 @@ import '../globals.css';
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import imgSignIn from '../../public/assets/header_logo.png';
-import { listBottom } from '@/constants';
 import Link from 'next/link';
 import qr from '../../public/assets/qr_code.svg';
+import { listBottom } from '@/constants';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
@@ -26,7 +26,9 @@ export default function RootLayout({
           alt="header_image"
           className="inline-block relative"
         />
+
         <div className="md:w-full container">{children}</div>
+
         <div className="rightsidebar-pc text-white items-center justify-center">
           <p className="text-[#777777] text-[13px]">Scan to get the app</p>
           <div className="bg-[#181818] p-5 rounded-xl border border-[#323333]">

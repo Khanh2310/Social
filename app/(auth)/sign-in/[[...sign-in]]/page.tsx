@@ -3,8 +3,8 @@ import { Input } from '@/components/ui/input';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import iconInstagram from '../../../../public/assets/icons8-instagram-96.svg';
 import iconNext from '../../../../public/assets/next.svg';
+import ButtonWithIcon from '@/components/molecules/ButtonWithIcon/ButtonWithIcon';
 const Page = () => {
   return (
     <>
@@ -35,34 +35,7 @@ const Page = () => {
           <p className="text-center text-[#777777] mx-4">or</p>
           <p className="before:content-[''] flex-1 border border-b-0 border-[#323333]"></p>
         </div>
-
-        <div className="flex items-center justify-between border border-[#323333] rounded-2xl p-3">
-          <Image
-            src={iconInstagram}
-            width={60}
-            height={60}
-            alt="icon_instagram"
-          />
-          <p className="text-base-semibold text-center text-light-1 ">
-            Continue with Instagram
-          </p>
-          <span className="text-[#777777]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </span>
-        </div>
+        <ButtonWithIcon />
       </section>
     </>
   );
